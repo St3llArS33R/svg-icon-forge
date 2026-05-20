@@ -21,7 +21,7 @@ python3 icongen.py my_icons.py --install
 
 **1. Download the runner (one line):**
 ```bash
-curl -O https://raw.githubusercontent.com/YOUR_USERNAME/svg-icon-forge/main/icongen.py
+curl -O https://raw.githubusercontent.com/St3llArS33R/svg-icon-forge/main/icongen.py
 ```
 
 **2. Write an icons file — zero imports needed, all helpers are pre-injected:**
