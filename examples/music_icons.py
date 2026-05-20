@@ -24,9 +24,11 @@ link("org.kde.elisa", "elisa")
 
 # ── Rhythmbox ─────────────────────────────────────────────────────────────────
 write("rhythmbox", f"""
-<path d="M5 13 Q5 4 12 4 Q19 4 19 13" {STROKE} stroke-width="{SWB}" {CAP}/>
-<rect x="3"  y="12" width="4" height="6" rx="2" {FILL}/>
-<rect x="17" y="12" width="4" height="6" rx="2" {FILL}/>
+<circle cx="12" cy="12" r="9"   {STROKE} stroke-width="{SW}"/>
+<circle cx="12" cy="12" r="3.5" {STROKE} stroke-width="{SWS}"/>
+<circle cx="12" cy="12" r="1.2" {FILL}/>
+<path d="M14 5 Q20 8 20 8" {STROKE} stroke-width="{SWB}" {CAP}/>
+<circle cx="20" cy="8" r="1.5" {FILL}/>
 """)
 link("rhythmbox", "org.gnome.Rhythmbox3", "headphones-app")
 
@@ -113,11 +115,9 @@ link("io.mpv.Mpv", "mpv", "multimedia-video-player", "media-video")
 
 # ── GNOME Music ────────────────────────────────────────────────────────────────
 write("org.gnome.Music", f"""
-<circle cx="9"  cy="16" r="3" {STROKE} stroke-width="{SW}"/>
-<circle cx="17" cy="14" r="3" {STROKE} stroke-width="{SW}"/>
-<line x1="12" y1="16" x2="12" y2="7" stroke="{C}" stroke-width="{SW}" stroke-linecap="round"/>
-<line x1="20" y1="14" x2="20" y2="5" stroke="{C}" stroke-width="{SW}" stroke-linecap="round"/>
-<line x1="12" y1="7"  x2="20" y2="5" stroke="{C}" stroke-width="{SWB}" stroke-linecap="round"/>
+<ellipse cx="9" cy="18" rx="4" ry="2.8" transform="rotate(-15 9 18)" {STROKE} stroke-width="{SW}"/>
+<line x1="12.8" y1="17.2" x2="12.8" y2="4" stroke="{C}" stroke-width="{SW}" stroke-linecap="round"/>
+<path d="M12.8 4 L20 6.5 L20 10 L12.8 7.5Z" {FILL}/>
 """)
 link("org.gnome.Music", "gnome-music")
 

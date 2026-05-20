@@ -172,8 +172,17 @@ def main() -> None:
 
     print(f"Generating icons from '{args.icons_file}'...")
     _run_file(args.icons_file, args.out, args.theme, args.install)
-    count = len(glob.glob(os.path.join(args.out, "scalable", "apps", "*.svg")))
-    print(f"  Done: {count} icons → {os.path.abspath(args.out)}/")
+
+    # Summary: unique designs vs aliases
+    import hashlib
+    files = glob.glob(os.path.join(args.out, "scalable", "apps", "*.svg"))
+    hashes: dict[str, list[str]] = {}
+    for f in files:
+        h = hashlib.md5(open(f).read().encode()).hexdigest()
+        hashes.setdefault(h, []).append(os.path.basename(f))
+    unique = len(hashes)
+    aliases = len(files) - unique
+    print(f"  Done: {unique} unique icons, {aliases} aliases → {os.path.abspath(args.out)}/")
 
 
 if __name__ == "__main__":
