@@ -38,11 +38,8 @@
 
       "Derivative Works" shall mean any work, whether in Source or Object
       form, that is based on (or derived from) the Work and for which the
-      editorial revisions, annotations, elaborations, or other transformations
-      represent, as a whole, an original work of authorship. For the purposes
-      of this License, Derivative Works shall not include works that remain
-      separable from, or merely link (or bind by name) to the interfaces of,
-      the Work and Derivative Works thereof.
+      editorial revisions, annotations, elaborations, or other
+      transformations represent, as a whole, an original work of authorship.
 
       "Contribution" shall mean, as submitted to the Licensor for inclusion
       in the Work by the copyright owner or by an individual or Legal Entity
@@ -112,7 +109,7 @@
       support, warranty, indemnity, or other liability obligations and/or
       rights consistent with this License.
 
-   Copyright 2025 svg-icon-forge contributors
+   Copyright 2026 Borys Zaitsev
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
